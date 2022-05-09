@@ -418,7 +418,6 @@ document.body.innerHTML =`
     </div>
     </div>`;
 
-
 let lang = localStorage.getItem('curLang') === null ? 'ru': localStorage.getItem('curLang');
 let caps = false;
 let shift_left = false;
@@ -427,7 +426,6 @@ let ctrl_left = false;
 let ctrl_right = false;
 let alt_left = false;
 let alt_right = false;
-
 
 const keyboardDrow = () => {
     for (let r = 0; r < 5; r++){
@@ -448,6 +446,7 @@ const keyboardDrow = () => {
         }
     }
 };
+
 keyboardDrow();
 
 const KEYBOARD = document.querySelector('.keyboard');
@@ -467,11 +466,13 @@ const shift = () => {
         if (k.getAttribute('noType') != 'true') k.innerText = lang === 'en' ? k.getAttribute('shiftEn') : k.getAttribute('shiftRu');
     }
 }
+
 const updateLetters = () => {
     for (let k of KEYS) {
         if (k.getAttribute('noType') != 'true' || k.getAttribute('code') === 'Lang') k.innerText = lang === 'en' ? k.getAttribute('langEn') : k.getAttribute('langRu');
     }
 }
+
 updateLetters();
 
 const toggleUpperTxt = () => {
@@ -484,8 +485,7 @@ const capsLock = () => {
     for (let k of KEYS) {
         if (k.getAttribute('noType') != 'true') k.classList.toggle("upperCase");
     }
-};
-
+}
 
 const getCursorPosition = (tArea) => {
     var CaretPos = 0;
@@ -498,11 +498,9 @@ const getCursorPosition = (tArea) => {
         CaretPos = tArea.selectionStart;
     }
     return CaretPos;
-};
+}
 
 KEYBOARD.addEventListener('click', event => {
-    console.log('--- pressed:', event.target.getAttribute('code'));
-
     if (
         event.target.getAttribute('noType') != 'true' &&
         event.target.classList[0] === 'key'
@@ -592,7 +590,6 @@ KEYBOARD.addEventListener('click', event => {
     TXT.focus()
 
     if((shift_left || shift_right) && (alt_left || alt_right) && (!ctrl_left && !ctrl_right)) {
-        console.log('LANG CHANGE')
         ALT_RIGHT.classList.remove('pressed');
         ALT_LEFT.classList.remove('pressed');
         SHIFT_RIGHT.classList.remove('pressed');
@@ -610,13 +607,11 @@ KEYBOARD.addEventListener('click', event => {
 })
 
 document.addEventListener('keydown', function(event) {
-    console.log('CAPS', caps);
     if (!caps && event.getModifierState('CapsLock')) {
         capsLock();
         caps = true;
         CAPS_LOCK.classList.toggle('pressed')
     };
-    console.log('CAPS', caps);
     
     for (let virtualKey of KEYS) {
         if (virtualKey.getAttribute('code') == event.code) virtualKey.classList.toggle('pressed') 
