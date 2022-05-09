@@ -31,7 +31,7 @@
     width: 50px;
     height: 50px;
     border: 0.5px solid rgb(163, 160, 160);
-    background-color: rgb(34, 36, 37);
+    background-color: rgb(38, 42, 44);
     color: aliceblue;
     margin: 1px;
     display: flex;
@@ -44,20 +44,32 @@
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    transition: 0.1s;
+    transform: scale(1);
 }
 .key:hover {
-    outline: 2px solid rgb(142, 235, 106);
+    outline: 2px solid rgb(72, 255, 0);
+}
+.key:active {
+    background-color: blueviolet;
+    transition: 0.02s;
+    transform: scale(0.9);
+    font-size: 19px;
+}
+
+.key.active {
+    background-color: red;
 }
 
 .upperCase {
     text-transform: uppercase;
 }
 
-.Backspace      { width: 114px; background-color: rgba(71, 74, 76, 1);}
+.Backspace      { width: 114px; }
 .Tab            { width: 62px; }
 .CapsLock       { width: 92px; }
 .ShiftLeft      { width: 114px; }
-.ControlLeft    { width: 80px; }
+.CtrlLeft       { width: 80px; }
 .Enter          { width: 124px; }
 .Space          { width: 292px; }
 
@@ -67,13 +79,19 @@
 .CapsLock,
 .ShiftLeft,  
 .ShiftRight,
-.ControlLeft,
-.ControlRight,
+.CtrlLeft,
+.CtrlRight,
 .Enter, 
 .Win,
 .AltLeft,
 .AltRight {
-    background-color: rgba(71, 74, 76, 1);
+    background-color: rgb(64, 70, 75);
+}
+
+.Lang { 
+    background-color: rgb(208, 221, 231);
+    color: #001aff;
+    border:1px solid #001aff73;
 }
 
 .ArrowLeft, 
@@ -85,4 +103,8 @@
 
 .pressed { 
     background-color: blueviolet;
+    transition: 0.02s;
+    transform: scale(0.9);
+    font-size: 19px;
+   
 }

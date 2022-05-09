@@ -3,84 +3,84 @@ const keysMap = [
         {
             key: { ru: 'ё', en: '`' },
             shift: { ru: 'Ё', en: '~' },
-            name: 'Backquote',
+            code: 'Backquote',
             class: 'key tilda Backquote',
         },
         {
             key: { ru: '1', en: '1' },
             shift: { ru: '!', en: '!' },
-            name: 'Digit1',
+            code: 'Digit1',
             class: 'key Digit1',
         },
         {
             key: { ru: '2', en: '2' },
             shift: { ru: '"', en: '@' },
-            name: 'Digit2',
+            code: 'Digit2',
             class: 'key Digit2',
         },
         {
             key: { ru: '3', en: '3' },
             shift: { ru: '№', en: '#' },
-            name: 'Digit3',
+            code: 'Digit3',
             class: 'key Digit3',
         },
         {
             key: { ru: '4', en: '4' },
             shift: { ru: ';', en: '$' },
-            name: 'Digit4',
+            code: 'Digit4',
             class: 'key Digit4',
         },
         {
             key: { ru: '5', en: '5' },
             shift: { ru: '%', en: '%' },
-            name: 'Digit5',
+            code: 'Digit5',
             class: 'key Digit5',
         },
         {
             key: { ru: '6', en: '6' },
             shift: { ru: ':', en: '^' },
-            name: 'Digit6',
+            code: 'Digit6',
             class: 'key Digit6',
         },
         {
             key: { ru: '7', en: '7' },
             shift: { ru: '?', en: '&' },
-            name: 'Digit7',
+            code: 'Digit7',
             class: 'key Digit7',
         },
         {
             key: { ru: '8', en: '8' },
             shift: { ru: '*', en: '*' },
-            name: 'Digit8',
+            code: 'Digit8',
             class: 'key Digit8',
         },
         {
             key: { ru: '9', en: '9' },
             shift: { ru: '(', en: '(' },
-            name: 'Digit9',
+            code: 'Digit9',
             class: 'key Digit9',
         },
         {
             key: { ru: '0', en: '0' },
             shift: { ru: ')', en: ')' },
-            name: 'Digit0',
+            code: 'Digit0',
             class: 'key Digit0',
         },
         {
             key: { ru: '-', en: '-' },
             shift: { ru: '_', en: '_' },
-            name: 'Minus',
+            code: 'Minus',
             class: 'key Minus',
         },
         {
             key: { ru: '=', en: '=' },
             shift: { ru: '+', en: '+' },
-            name: 'Equal',
+            code: 'Equal',
             class: 'key Equal',
         },
         {
             key: { ru: 'Backspace', en: 'Backspace' },
-            name: 'Backspace',
+            code: 'Backspace',
             class: 'key key_backspace Backspace',
             noType: true,
         },
@@ -88,91 +88,91 @@ const keysMap = [
     [ // row 2
         {
             key: { ru: 'Tab', en: 'Tab' },
-            name: 'Tab',
+            code: 'Tab',
             class: 'key key_tab Tab',
             noType: true,
         },
         {
             key: { ru: 'й', en: 'q' },
             shift: { ru: 'Й', en: 'Q' },
-            name: 'KeyQ',
+            code: 'KeyQ',
             class: 'key KeyQ',
         },
         {
             key: { ru: 'ц', en: 'w' },
             shift: { ru: 'Ц', en: 'W' },
-            name: 'KeyW',
+            code: 'KeyW',
             class: 'key KeyW',
         },
         {
             key: { ru: 'у', en: 'e' },
             shift: { ru: 'У', en: 'E' },
-            name: 'KeyE',
+            code: 'KeyE',
             class: 'key KeyE',
         },
         {
             key: { ru: 'к', en: 'r' },
             shift: { ru: 'К', en: 'R' },
-            name: 'KeyR',
+            code: 'KeyR',
             class: 'key KeyR',
         },
         {
             key: { ru: 'е', en: 't' },
             shift: { ru: 'Е', en: 'T' },
-            name: 'KeyT',
+            code: 'KeyT',
             class: 'key KeyT',
         },
         {
             key: { ru: 'н', en: 'y' },
             shift: { ru: 'Н', en: 'Y' },
-            name: 'KeyY',
+            code: 'KeyY',
             class: 'key KeyY',
         },
         {
             key: { ru: 'г', en: 'u' },
             shift: { ru: 'Г', en: 'U' },
-            name: 'KeyU',
+            code: 'KeyU',
             class: 'key KeyU',
         },
         {
             key: { ru: 'ш', en: 'i' },
             shift: { ru: 'Ш', en: 'I' },
-            name: 'KeyI',
+            code: 'KeyI',
             class: 'key KeyI',
         },
         {
             key: { ru: 'щ', en: 'o' },
             shift: { ru: 'Щ', en: 'O' },
-            name: 'KeyO',
+            code: 'KeyO',
             class: 'key KeyO',
         },
         {
             key: { ru: 'з', en: 'p' },
             shift: { ru: 'З', en: 'P' },
-            name: 'KeyP',
+            code: 'KeyP',
             class: 'key KeyP',
         },
         {
             key: { ru: 'х', en: '[' },
             shift: { ru: 'Х', en: '{' },
-            name: 'BracketLeft',
+            code: 'BracketLeft',
             class: 'key BracketLeft',
         },
         {
             key: { ru: 'ъ', en: ']' },
             shift: { ru: 'Ъ', en: '}' },
-            name: 'BracketRight',
+            code: 'BracketRight',
             class: 'key BracketRight',
         },
         {
             key: { ru: '\\', en: '\\' },
             shift: { ru: '|', en: '|' },
-            name: 'Backslash',
+            code: 'Backslash',
             class: 'key key_backslash Backslash',
         },
         {
             key: { ru: 'Del', en: 'Del' },
-            name: 'Delete',
+            code: 'Delete',
             class: 'key key_del Delete',
             noType: true,
         },
@@ -180,79 +180,79 @@ const keysMap = [
     [ // row 3
         {
             key: { ru: 'Caps Lock', en: 'Caps Lock' },
-            name: 'CapsLock',
+            code: 'CapsLock',
             class: 'key CapsLock',
             noType: true,
         },
         {
             key: { ru: 'ф', en: 'a' },
             shift: { ru: 'Ф', en: 'A' },
-            name: 'KeyA',
+            code: 'KeyA',
             class: 'key KeyA',
         },
         {
             key: { ru: 'ы', en: 's' },
             shift: { ru: 'Ы', en: 'S' },
-            name: 'KeyS',
+            code: 'KeyS',
             class: 'key KeyS',
         },
         {
             key: { ru: 'в', en: 'd' },
             shift: { ru: 'В', en: 'D' },
-            name: 'KeyD',
+            code: 'KeyD',
             class: 'key KeyD',
         },
         {
             key: { ru: 'а', en: 'f' },
             shift: { ru: 'А', en: 'F' },
-            name: 'KeyF',
+            code: 'KeyF',
             class: 'key KeyF',
         },
         {
             key: { ru: 'п', en: 'g' },
             shift: { ru: 'П', en: 'G' },
-            name: 'KeyG',
+            code: 'KeyG',
             class: 'key KeyG',
         },
         {
             key: { ru: 'р', en: 'h' },
             shift: { ru: 'Р', en: 'H' },
-            name: 'KeyH',
+            code: 'KeyH',
             class: 'key KeyH',
         },
         {
             key: { ru: 'о', en: 'j' },
             shift: { ru: 'О', en: 'J' },
-            name: 'KeyJ',
+            code: 'KeyJ',
             class: 'key KeyJ',
         },
         {
             key: { ru: 'л', en: 'k' },
             shift: { ru: 'Л', en: 'K' },
-            name: 'KeyK',
+            code: 'KeyK',
             class: 'key KeyK',
         },
         {
             key: { ru: 'д', en: 'l' },
             shift: { ru: 'Д', en: 'L' },
-            name: 'KeyL',
+            code: 'KeyL',
             class: 'key KeyL',
         },
         {
             key: { ru: 'ж', en: ';' },
             shift: { ru: 'Ж', en: ':' },
-            name: 'Semicolon',
+            code: 'Semicolon',
             class: 'key Semicolon',
         },
         {
             key: { ru: 'э', en: '\'' },
             shift: { ru: 'Э', en: '"' },
-            name: 'Quote',
+            code: 'Quote',
             class: 'key Quote',
         },
         {
             key: { ru: 'Enter', en: 'Enter' },
-            name: 'Enter',
+            code: 'Enter',
             class: 'key key_enter Enter',
             noType: true,
         },
@@ -260,85 +260,84 @@ const keysMap = [
     [ // row 4
         {
             key: { ru: 'Shift', en: 'Shift' },
-            name: 'ShiftLeft',
+            code: 'ShiftLeft',
             class: 'key key_leftshift ShiftLeft',
             noType: true,
         },
         {
-            key: { ru: '\\', en: '\\' },
-            name: 'ShiftLeft',
+            key: { ru: '\\', en: '\/' },
+            code: 'KeyDash',
             class: 'key key_dash KeyDash',
-            noType: true,
         },
         {
             key: { ru: 'я', en: 'z' },
             shift: { ru: 'Я', en: 'Z' },
-            name: 'KeyZ',
+            code: 'KeyZ',
             class: 'key KeyZ',
         },
         {
             key: { ru: 'ч', en: 'x' },
             shift: { ru: 'Ч', en: 'X' },
-            name: 'KeyX',
+            code: 'KeyX',
             class: 'key KeyX',
         },
         {
             key: { ru: 'с', en: 'c' },
             shift: { ru: 'С', en: 'C' },
-            name: 'KeyC',
+            code: 'KeyC',
             class: 'key KeyC',
         },
         {
             key: { ru: 'м', en: 'v' },
             shift: { ru: 'М', en: 'V' },
-            name: 'KeyV',
+            code: 'KeyV',
             class: 'key KeyV',
         },
         {
             key: { ru: 'и', en: 'b' },
             shift: { ru: 'И', en: 'B' },
-            name: 'KeyB',
+            code: 'KeyB',
             class: 'key KeyB',
         },
         {
             key: { ru: 'т', en: 'n' },
             shift: { ru: 'Т', en: 'N' },
-            name: 'KeyN',
+            code: 'KeyN',
             class: 'key KeyN',
         },
         {
             key: { ru: 'ь', en: 'm' },
             shift: { ru: 'Ь', en: 'M' },
-            name: 'KeyM',
+            code: 'KeyM',
             class: 'key KeyM',
         },
         {
             key: { ru: 'б', en: ',' },
             shift: { ru: 'Б', en: '<' },
-            name: 'Comma',
+            code: 'Comma',
             class: 'key Comma',
         },
         {
             key: { ru: 'ю', en: '.' },
             shift: { ru: 'Ю', en: '>' },
-            name: 'Period',
+            code: 'Period',
             class: 'key Period',
         },
         {
             key: { ru: '.', en: '/' },
             shift: { ru: ',', en: '?' },
-            name: 'Slash',
+            code: 'Slash',
             class: 'key Slash',
         },
         {
             key: { ru: '▲', en: '▲' },
-            name: 'ArrowUp',
+            code: 'ArrowUp',
             noType: true,
             class: 'key ArrowUp',
         },
         {
             key: { ru: 'Shift', en: 'Shift' },
-            name: 'ShiftRight',
+            code: 'ShiftRight',
             class: 'key key_rightshift ShiftRight',
             noType: true,
         },
@@ -346,60 +345,60 @@ const keysMap = [
     [ // row 5
         {
             key: { ru: 'Ctrl', en: 'Ctrl' },
-            name: 'ControlLeft',
-            class: 'key key_leftctrl ControlLeft',
+            code: 'ControlLeft',
+            class: 'key key_leftctrl CtrlLeft',
             noType: true,
         },
         {
             key: { ru: 'Win', en: 'Win' },
-            name: 'Win',
+            code: 'MetaLeft',
             class: 'key key_win Win',
             noType: true,
         },
         {
             key: { ru: 'Alt', en: 'Alt' },
-            name: 'AltLeft',
+            code: 'AltLeft',
             class: 'key key_leftalt AltLeft',
             noType: true,
         },
         { 
             key: { ru: ' ', en: ' ' }, 
-            name: 'Space',
+            code: 'Space',
             class: 'key key_space Space' 
         },
         {
             key: { ru: 'Alt', en: 'Alt' },
-            name: 'AltRight',
+            code: 'AltRight',
             class: 'key key_rightalt AltRight',
             noType: true,
         },
         {
             key: { ru: 'Ctrl', en: 'Ctrl' },
-            name: 'ControlRight',
-            class: 'key key_rightctrl ControlRight',
-            noType: true,
+            code: 'ControlRight',
+            class: 'key key_rightctrl CtrlRight',
+            noType: true,                              
         },
         {
-            key: { ru: '🇷🇺', en: 'en' },
-            name: 'Lang',
+            key: { ru: 'Ru', en: 'En' },
+            code: 'Lang',
             class: 'key key_lang Lang',
             noType: true,
         },
         {
             key: { ru: '◄', en: '◄' },
-            name: 'ArrowLeft',
+            code: 'ArrowLeft',
             noType: true,
             class: 'key ArrowLeft',
         },
         {
             key: { ru: '▼', en: '▼' },
-            name: 'ArrowDown',
+            code: 'ArrowDown',
             noType: true,
             class: 'key ArrowDown',
         },
         {
             key: { ru: '►', en: '►' },
-            name: 'ArrowRight',
+            code: 'ArrowRight',
             noType: true,
             class: 'key ArrowRight',
         },
@@ -418,12 +417,14 @@ document.body.innerHTML =`
     </div>
     </div>`;
 
-let lang = 'ru';
+let lang = localStorage.getItem('curLang') === null ? 'ru': localStorage.getItem('curLang');
 let caps = false;
 let shift_left = false;
 let shift_right = false;
-let ctrl = false;
-let alt = false;
+let ctrl_left = false;
+let ctrl_right = false;
+let alt_left = false;
+let alt_right = false;
 
 
 const keyboardDrow = () => {
@@ -436,7 +437,7 @@ const keyboardDrow = () => {
             let shiftEn = keysMap[r][i].shift ? keysMap[r][i].shift['en'] : '';
             
             document.querySelector('.row' + (r+1)).insertAdjacentHTML("beforeEnd", 
-            `<div class='${keysMap[r][i].class}' langRu='${langRu}' langEn='${langEn}' shiftRu='${shiftRu}' shiftEn='${shiftEn}' name='${keysMap[r][i].name}' noType='${keysMap[r][i].noType}'>${keysMap[r][i].key[lang]}</div>`
+            `<div class='${keysMap[r][i].class}' langRu='${langRu}' langEn='${langEn}' shiftRu='${shiftRu}' shiftEn='${shiftEn}' code='${keysMap[r][i].code}' noType='${keysMap[r][i].noType}'>${keysMap[r][i].key[lang]}</div>`
             );
         }
     }
@@ -446,51 +447,31 @@ keyboardDrow();
 const KEYBOARD = document.querySelector('.keyboard');
 const KEYS = document.querySelectorAll('.key');
 const TXT = document.querySelector('.txt');
-
+const CAPS_LOCK = document.querySelector('.CapsLock');
 const SHIFT_LEFT = document.querySelector('.ShiftLeft');
 const SHIFT_RIGHT = document.querySelector('.ShiftRight');
+const ALT_LEFT = document.querySelector('.AltLeft');
+const ALT_RIGHT = document.querySelector('.AltRight');
+const LANG = document.querySelector('.Lang');
+
 
 const shift = () => {
     for (let k of KEYS) {
         if (k.getAttribute('noType') != 'true') k.innerText = lang === 'en' ? k.getAttribute('shiftEn') : k.getAttribute('shiftRu');
     }
 }
-const unShift = () => {
+const updateLetters = () => {
     for (let k of KEYS) {
-        if (k.getAttribute('noType') != 'true') k.innerText = lang === 'en' ? k.getAttribute('langEn') : k.getAttribute('langRu');
+        if (k.getAttribute('noType') != 'true' || k.getAttribute('code') === 'Lang') k.innerText = lang === 'en' ? k.getAttribute('langEn') : k.getAttribute('langRu');
     }
 }
-
-SHIFT_LEFT.addEventListener('click', (event) => {
-    shift_left = shift_left ? false : true;
-    SHIFT_LEFT.classList.toggle('pressed');
-    if (!shift_right && !shift_left) {
-        unShift();
-    } else if (!shift_right && shift_left){
-        shift();
-    };
-});
-
-SHIFT_RIGHT.addEventListener('click', (event) => {
-    shift_right = shift_right ? false : true;
-    SHIFT_RIGHT.classList.toggle('pressed');
-    if (!shift_left && !shift_right) {
-        unShift();
-    } else if (!shift_left && shift_right){
-        shift();
-    };
-});
+updateLetters();
 
 const capsLock = () => {
     for (let k of KEYS) {
         if (k.getAttribute('noType') != 'true') k.classList.toggle("upperCase");
     }
 };
-
-
-
-
-
 
 
 const getCursorPosition = (tArea) => {
@@ -506,8 +487,13 @@ const getCursorPosition = (tArea) => {
     return CaretPos;
 };
 
+// const pressButton = (div) => {
+//     div.classList.toggle('pressed');
+//     setTimeout ( () => div.classList.toggle('pressed'), 200);
+// }
 
 KEYBOARD.addEventListener('click', event => {
+
     if (
         event.target.getAttribute('noType') != 'true' &&
         event.target.classList[0] === 'key'
@@ -515,23 +501,26 @@ KEYBOARD.addEventListener('click', event => {
         TXT.value += event.target.innerText
     };
 
-    console.log('--- pressed:', event.target.getAttribute('name'));
+    console.log('--- pressed:', event.target.getAttribute('code'));
     let position = getCursorPosition(TXT);
 
-    switch (event.target.getAttribute('name')) {
+    switch (event.target.getAttribute('code')) {
         case 'Backspace':
             if (TXT.value.length != 0) TXT.value = TXT.value.slice(0, -1);
             break;
         case 'Space':
-            if (TXT.value.length != 0) TXT.value += ' ';
+            TXT.value += ' ';
             break;
         case 'Tab':
-            if (TXT.value.length != 0) TXT.value += `\t`;
+            TXT.value += `\t`;
+            break;
+        case 'Enter':
+            TXT.value += `\n`;
             break;
         case 'CapsLock':
             caps ? caps = false : caps = true;
-            console.log(caps);
             capsLock();
+            CAPS_LOCK.classList.toggle('pressed');
             break;
         case 'Delete':
             if (TXT.value.length > position) {
@@ -540,11 +529,79 @@ KEYBOARD.addEventListener('click', event => {
                 TXT.setSelectionRange(position, position);
             };
             break;
+        case 'ShiftLeft':
+            shift_left = shift_left ? false : true;
+            SHIFT_LEFT.classList.toggle('pressed');
+            if(!alt_left && !alt_right) {
+                if (!shift_right && !shift_left) updateLetters();
+                if (!shift_right && shift_left) shift();
+            };
+            break;
+        case 'ShiftRight':
+            shift_right = shift_right ? false : true;
+            SHIFT_RIGHT.classList.toggle('pressed');
+            if(!alt_left && !alt_right) {
+                if (!shift_left && !shift_right) updateLetters();
+                if (!shift_left && shift_right) shift();
+            };
+            break;
+        case 'AltLeft':
+            alt_left = alt_left ? false : true;
+            ALT_LEFT.classList.toggle('pressed');
+            break;
+        case 'AltRight':
+            alt_right = alt_right ? false : true;
+            ALT_RIGHT.classList.toggle('pressed');
+            break;
+        case 'ControlLeft':
+            ctrl_left = ctrl_left ? false : true;
+            event.target.classList.toggle('pressed');
+            break;
+        case 'ControlRight':
+            ctrl_right = ctrl_right ? false : true;
+            event.target.classList.toggle('pressed');
+            break;
+        case 'Lang':
+            lang = lang === "ru" ? "en" : "ru";
+            updateLetters();
+            localStorage.setItem("curLang", lang)
+            break;
         default:
            break;
     }
     TXT.focus()
+
+    if((shift_left || shift_right) && (alt_left || alt_right) && (!ctrl_left && !ctrl_right)) {
+        console.log('LANG CHANGE')
+        ALT_RIGHT.classList.remove('pressed');
+        ALT_LEFT.classList.remove('pressed');
+        SHIFT_RIGHT.classList.remove('pressed');
+        SHIFT_LEFT.classList.remove('pressed');
+        shift_right = false;
+        shift_left = false;
+        alt_left = false;
+        alt_right = false;
+
+        lang = lang === "ru" ? "en" : "ru";
+        updateLetters();
+        localStorage.setItem("curLang", lang)
+    }
+
 })
 
+document.addEventListener('keydown', function(event) {
+    TXT.focus()
+    let position = getCursorPosition(TXT);
+    TXT.setSelectionRange(position, position)
 
-console.log('--------',getCursorPosition(TXT));
+    for(let virtualKey of KEYS) {
+        if (virtualKey.getAttribute('code') == event.code) virtualKey.classList.add('pressed')
+    }
+});
+
+document.addEventListener('keyup', function(event) {
+    for(let virtualKey of KEYS) {
+        if (virtualKey.getAttribute('code') == event.code) virtualKey.classList.remove('pressed')
+    }
+});
+
