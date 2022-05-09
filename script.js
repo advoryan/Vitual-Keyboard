@@ -245,8 +245,8 @@ const keysMap = [
             class: 'key Semicolon',
         },
         {
-            key: { ru: 'э', en: '\'' },
-            shift: { ru: 'Э', en: '"' },
+            key: { ru: 'э', en: '&#39;' },
+            shift: { ru: 'Э', en: '\"' },
             code: 'Quote',
             class: 'key Quote',
         },
@@ -265,7 +265,8 @@ const keysMap = [
             noType: true,
         },
         {
-            key: { ru: '\\', en: '\/' },
+            key: { ru: '\\', en: '\\' },
+            shift: { ru: '\/', en: '\/' },
             code: 'KeyDash',
             class: 'key key_dash KeyDash',
         },
@@ -435,9 +436,13 @@ const keyboardDrow = () => {
             let langEn = keysMap[r][i].key ? keysMap[r][i].key['en'] : '';
             let shiftRu = keysMap[r][i].shift ? keysMap[r][i].shift['ru'] : '';
             let shiftEn = keysMap[r][i].shift ? keysMap[r][i].shift['en'] : '';
-            
+            let upper_smb = shiftRu == shiftEn ? shiftRu : `${shiftRu} ${shiftEn}`
+            let uppertxt = (r===0 && keysMap[r][i].code) ? `<div class="uppertxt">${upper_smb}</div>`: '';
+
             document.querySelector('.row' + (r+1)).insertAdjacentHTML("beforeEnd", 
-            `<div class='${keysMap[r][i].class}' langRu='${langRu}' langEn='${langEn}' shiftRu='${shiftRu}' shiftEn='${shiftEn}' code='${keysMap[r][i].code}' noType='${keysMap[r][i].noType}'>${keysMap[r][i].key[lang]}</div>`
+            `<div class="key-wrapper">
+            <div class='${keysMap[r][i].class}' langRu='${langRu}' langEn='${langEn}' shiftRu='${shiftRu}' shiftEn='${shiftEn}' code='${keysMap[r][i].code}' noType='${keysMap[r][i].noType}'>${keysMap[r][i].key[lang]}</div> ${uppertxt}
+            </div>`
             );
         }
     }
@@ -445,6 +450,7 @@ const keyboardDrow = () => {
 keyboardDrow();
 
 const KEYBOARD = document.querySelector('.keyboard');
+const UPPERTXT = document.querySelectorAll('.uppertxt');
 const KEYS = document.querySelectorAll('.key');
 const TXT = document.querySelector('.txt');
 const CAPS_LOCK = document.querySelector('.CapsLock');
@@ -467,6 +473,12 @@ const updateLetters = () => {
 }
 updateLetters();
 
+const toggleUpperTxt = () => {
+    for (let u of UPPERTXT) {
+        u.classList.toggle('display-none');
+    }
+}
+
 const capsLock = () => {
     for (let k of KEYS) {
         if (k.getAttribute('noType') != 'true') k.classList.toggle("upperCase");
@@ -487,12 +499,8 @@ const getCursorPosition = (tArea) => {
     return CaretPos;
 };
 
-// const pressButton = (div) => {
-//     div.classList.toggle('pressed');
-//     setTimeout ( () => div.classList.toggle('pressed'), 200);
-// }
-
 KEYBOARD.addEventListener('click', event => {
+    console.log('--- pressed:', event.target.getAttribute('code'));
 
     if (
         event.target.getAttribute('noType') != 'true' &&
@@ -501,7 +509,6 @@ KEYBOARD.addEventListener('click', event => {
         TXT.value += event.target.innerText
     };
 
-    console.log('--- pressed:', event.target.getAttribute('code'));
     let position = getCursorPosition(TXT);
 
     switch (event.target.getAttribute('code')) {
@@ -533,16 +540,28 @@ KEYBOARD.addEventListener('click', event => {
             shift_left = shift_left ? false : true;
             SHIFT_LEFT.classList.toggle('pressed');
             if(!alt_left && !alt_right) {
-                if (!shift_right && !shift_left) updateLetters();
-                if (!shift_right && shift_left) shift();
+                if (!shift_right && !shift_left) {
+                    updateLetters();
+                    toggleUpperTxt();
+                };
+                if (!shift_right && shift_left) {
+                    shift();
+                    toggleUpperTxt();
+                };
             };
             break;
         case 'ShiftRight':
             shift_right = shift_right ? false : true;
             SHIFT_RIGHT.classList.toggle('pressed');
             if(!alt_left && !alt_right) {
-                if (!shift_left && !shift_right) updateLetters();
-                if (!shift_left && shift_right) shift();
+                if (!shift_left && !shift_right) {
+                    updateLetters();
+                    toggleUpperTxt();
+                };
+                if (!shift_left && shift_right) {
+                    shift();
+                    toggleUpperTxt();
+                };
             };
             break;
         case 'AltLeft':
@@ -590,18 +609,36 @@ KEYBOARD.addEventListener('click', event => {
 })
 
 document.addEventListener('keydown', function(event) {
-    TXT.focus()
-    let position = getCursorPosition(TXT);
-    TXT.setSelectionRange(position, position)
+    console.log('CAPS', caps);
+    if (!caps && event.getModifierState('CapsLock')) {
+        capsLock();
+        caps = true;
+        CAPS_LOCK.classList.toggle('pressed')
+    };
+    console.log('CAPS', caps);
+    
+    for (let virtualKey of KEYS) {
+        if (virtualKey.getAttribute('code') == event.code) virtualKey.classList.toggle('pressed') 
+    }
 
-    for(let virtualKey of KEYS) {
-        if (virtualKey.getAttribute('code') == event.code) virtualKey.classList.add('pressed')
+    if (event.code == 'CapsLock') { 
+        caps ? caps = false : caps = true;
+        capsLock();
+        CAPS_LOCK.classList.toggle('pressed')
+    }
+
+    if (event.shiftKey && event.altKey) {
+        lang = lang === "ru" ? "en" : "ru";
+        updateLetters();
+        localStorage.setItem("curLang", lang);
     }
 });
 
 document.addEventListener('keyup', function(event) {
     for(let virtualKey of KEYS) {
-        if (virtualKey.getAttribute('code') == event.code) virtualKey.classList.remove('pressed')
+        if (virtualKey.getAttribute('code') == event.code) {
+            virtualKey.classList.toggle('pressed')
+        }
     }
 });
 
