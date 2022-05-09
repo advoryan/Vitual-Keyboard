@@ -418,6 +418,7 @@ document.body.innerHTML =`
     </div>
     </div>`;
 
+
 let lang = localStorage.getItem('curLang') === null ? 'ru': localStorage.getItem('curLang');
 let caps = false;
 let shift_left = false;
@@ -642,3 +643,6 @@ document.addEventListener('keyup', function(event) {
     }
 });
 
+document.body.querySelector('.wrapper').insertAdjacentHTML("beforeEnd", `<div class="description"> Please use <b>Alt + Shift</b> to switch language</div>`);
+document.body.querySelector('.wrapper').insertAdjacentHTML("beforeEnd", `<div class="description"> This is <b>Windows</b> app</div>`);
+document.body.querySelector('.wrapper').insertAdjacentHTML("afterBegin", `<div class="description"> RSSchool <b>Virtual Keyboard</b> task</div>`)

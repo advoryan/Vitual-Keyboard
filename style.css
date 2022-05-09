@@ -9,22 +9,22 @@
     justify-content: center;
     align-items: center;
     font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
 }
 .wrapper textarea { 
-    width: 806px;
+    width: 644px;
     margin: 15px;
     min-height: 100px;
-    font-size: 20px;
+    font-size: 16px;
     padding: 10px;
     box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px rgba(255, 255, 255, 1);
 }
 .keyboard {
     background-color: rgba(25, 26, 27, 0.3);
     border-radius: 5px;
-    padding: 4px 8px;
+    padding: 3px 6px;
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     outline: 0.5px solid rgba(0, 0, 0, 0.253);
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22) ;
 }
@@ -33,12 +33,12 @@
     flex-wrap: nowrap;
 }
 .key {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border: 0.5px solid rgb(163, 160, 160);
-    background-color: rgb(38, 42, 44);
-    color: aliceblue;
-    margin: 1px;
+    background-color: rgb(47, 52, 54);
+    color: rgb(232, 234, 236);
+    margin: 0.5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,7 +51,7 @@
     user-select: none;
     transition: 0.1s;
     transform: scale(1);
-    outline: 1px solid rgba(207, 12, 12, 0.15);
+    outline: 1px solid rgba(207, 12, 12, 0.11);
 }
 .key:hover {
     outline: 2px solid rgb(72, 255, 0);
@@ -60,24 +60,20 @@
     background-color: blueviolet;
     transition: 0.02s;
     transform: scale(0.9);
-    font-size: 19px;
-}
-
-.key.active {
-    background-color: red;
+    font-size: 15px;
 }
 
 .upperCase {
     text-transform: uppercase;
 }
 
-.Backspace      { width: 114px; }
+.Backspace      { width: 103px; }
 .Tab            { width: 62px; }
-.CapsLock       { width: 92px; }
-.ShiftLeft      { width: 114px; }
+.CapsLock       { width: 86px; }
+.ShiftLeft      { width: 103px; }
 .CtrlLeft       { width: 80px; }
-.Enter          { width: 124px; }
-.Space          { width: 292px; }
+.Enter          { width: 98px; }
+.Space          { width: 227px; }
 
 .Backspace,
 .Delete,
@@ -114,7 +110,7 @@
     background-color: blueviolet;
     transition: 0.02s;
     transform: scale(0.95);
-    font-size: 18px;
+    font-size: 16px;
    
 }
 .key-wrapper {
@@ -122,12 +118,15 @@
 }
 .uppertxt {
     position: absolute;
-    top: 3px;
+    top: 2px;
     left: 6px;
-    font-size: 10px;
+    font-size: 9px;
     z-index: 10;
-    color: #ffffffbb;
+    color: #e9e7e7bb;
 }
 .display-none {
     display: none;
+}
+.description {
+    margin-top: 22px;
 }
