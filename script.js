@@ -430,14 +430,12 @@ let alt_right = false;
 const keyboardDrow = () => {
     for (let r = 0; r < 5; r++){
         for (let i = 0; i < keysMap[r].length; i++) {
-
             let langRu = keysMap[r][i].key ? keysMap[r][i].key['ru'] : '';
             let langEn = keysMap[r][i].key ? keysMap[r][i].key['en'] : '';
             let shiftRu = keysMap[r][i].shift ? keysMap[r][i].shift['ru'] : '';
             let shiftEn = keysMap[r][i].shift ? keysMap[r][i].shift['en'] : '';
             let upper_smb = shiftRu == shiftEn ? shiftRu : `${shiftRu} ${shiftEn}`
             let uppertxt = (r===0 && keysMap[r][i].code) ? `<div class="uppertxt">${upper_smb}</div>`: '';
-
             document.querySelector('.row' + (r+1)).insertAdjacentHTML("beforeEnd", 
             `<div class="key-wrapper">
             <div class='${keysMap[r][i].class}' langRu='${langRu}' langEn='${langEn}' shiftRu='${shiftRu}' shiftEn='${shiftEn}' code='${keysMap[r][i].code}' noType='${keysMap[r][i].noType}'>${keysMap[r][i].key[lang]}</div> ${uppertxt}
@@ -459,7 +457,6 @@ const SHIFT_RIGHT = document.querySelector('.ShiftRight');
 const ALT_LEFT = document.querySelector('.AltLeft');
 const ALT_RIGHT = document.querySelector('.AltRight');
 const LANG = document.querySelector('.Lang');
-
 
 const shift = () => {
     for (let k of KEYS) {
@@ -598,12 +595,10 @@ KEYBOARD.addEventListener('click', event => {
         shift_left = false;
         alt_left = false;
         alt_right = false;
-
         lang = lang === "ru" ? "en" : "ru";
         updateLetters();
         localStorage.setItem("curLang", lang)
     }
-
 })
 
 document.addEventListener('keydown', function(event) {
