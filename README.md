@@ -1,8 +1,8 @@
 Hi! I'm Alex! Nice to meet you!
 
-Here you can find my CVs:
-HTML, CSS: https://advoryan.github.io/rsschool-cv/
-Markdown: https://advoryan.github.io/rsschool-cv/cv
+Current project link: https://advoryan.github.io/Vitual-Keyboard/
+
+Here you can find my CVs: https://advoryan.github.io/rsschool-cv/
 
 Please feel free to communicate!
 
