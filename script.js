@@ -527,7 +527,7 @@ KEYBOARD.addEventListener('click', event => {
             break;
         case 'Delete':
             if (TXT.value.length > position) {
-                TXT.value = TXT.value.substring(0, position) + TXT.value.substring(position+1, TXT.value.length);
+                TXT.value = TXT.value.substring(0, position) + TXT.value.substring(position + 1, TXT.value.length);
                 TXT.focus()
                 TXT.setSelectionRange(position, position);
             };
